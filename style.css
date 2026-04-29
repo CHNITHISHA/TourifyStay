@@ -1,0 +1,200 @@
+/* ===== BACKGROUND (Animated Dark Gradient) ===== */
+body {
+  background: linear-gradient(-45deg, #0f172a, #1e293b, #020617, #111827);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  font-family: 'Segoe UI', sans-serif;
+  color: #ffffff;
+}
+
+/* Background animation */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== CARD (Glass Effect) ===== */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: 0.4s;
+  color: #ffffff;
+}
+
+
+
+
+/* Glow shadow */
+.login-card {
+  box-shadow: 0 0 40px rgba(255, 90, 95, 0.2);
+}
+
+/* Hover lift */
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* ===== LOGO ===== */
+.logo {
+  width: 60px;
+  animation: floatLogo 3s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes floatLogo {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* ===== TEXT FIX (IMPORTANT) ===== */
+h4 {
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 10px rgba(255, 90, 95, 0.4);
+}
+
+p {
+  color: #d1d5db;
+}
+
+/* Links */
+a {
+  color: #ff7a7f;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff5a5f;
+}
+
+/* ===== INPUT FIELDS ===== */
+.form-control {
+  background: rgba(255,255,255,0.08);
+  border: none;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.form-control::placeholder {
+  color: #9ca3af;
+}
+
+.form-control:focus {
+  background: rgba(255,255,255,0.12);
+  box-shadow: 0 0 8px #ff5a5f;
+  color: #ffffff;
+}
+
+/* ===== BUTTON ===== */
+.btn-primary {
+  background: linear-gradient(135deg, #ff5a5f, #ff7a7f);
+  border: none;
+  border-radius: 10px;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #e0484d, #ff5a5f);
+}
+
+/* ===== OPTIONAL ICONS / FUTURE ===== */
+.wishlist {
+  font-size: 20px;
+  color: #777;
+  cursor: pointer;
+}
+
+.wishlist.active {
+  color: #ff5a5f;
+}
+
+/* Badge */
+.badge-host {
+  background: #ff5a5f;
+  color: white;
+  padding: 3px 6px;
+  border-radius: 6px;
+}
+
+/* ===== DARK MODE TOGGLE FIX ===== */
+body.dark {
+  background: #020617 !important;
+}
+
+/* Navbar dark */
+body.dark .navbar {
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+}
+
+/* Buttons fix */
+body.dark .btn-light {
+  background: #1e293b;
+  color: #fff;
+  border: none;
+}
+
+body.dark .btn-outline-dark {
+  color: #fff;
+  border-color: #555;
+}
+
+body.dark .btn-outline-dark:hover {
+  background: #d436e6;
+  border-color: #c10fc4;
+}
+
+/* Dropdown + inputs */
+body.dark select,
+body.dark input {
+  background: rgba(255,255,255,0.08);
+  color: white;
+  border: none;
+}
+/* ===== FIX SELECT + INPUT TEXT VISIBILITY ===== */
+
+/* Input & select text */
+.form-control,
+select {
+  color: #ffffff !important;
+  background: rgba(255,255,255,0.08) !important;
+}
+
+/* Dropdown options (important) */
+select option {
+  background: #0f172a;   /* dark background */
+  color: #ffffff;        /* white text */
+}
+
+/* Placeholder fix */
+.form-control::placeholder {
+  color: #cbd5e1 !important;
+}
+
+/* When typing */
+input {
+  color: #ffffff !important;
+}
+
+/* Fix for dropdown arrow visibility */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Optional: add custom arrow */
+select {
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='20' viewBox='0 0 20 20' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M5 7l5 5 5-5H5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+}
